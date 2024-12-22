@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="grid gap-20 m-8 *:text-xl">
+    <header class="grid grid-cols-[1fr_auto]">
+        <a href="#">Nivacraft</a>
+        <ul class="grid grid-cols-2 gap-8">
+            <li>Bicicleta</li>
+            <li>Contato</li>
+        </ul>
+    </header>
+    <main class="grid gap-10">
+        <section class="grid grid-cols-3 gap-10">
+            <p>Produtos de Alta Qualidade</p>
+            <p class="col-span-2">Produtos de alta precisão e qualidade, feitos sob medida para você. Explore o mundo na sua velocidade com a Nivacraft.</p>
+        </section>
+        <section class="grid grid-cols-3 gap-10 *:grid *:gap-3">
+            <div><img src="img/notebook.jpg" alt=""> <p>Notebook R$ 2.000</p></div>
+            <div><img src="img/camera.jpg" alt=""> <p>Câmera R$ 1.500</p></div>
+            <div><img src="img/tablet.jpg" alt=""> <p>Tablet R$ 1.200</p></div>
+        </section>
+    </main>
+
+</body>
+
+</html>
