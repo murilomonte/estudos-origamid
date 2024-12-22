@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="m-8">
+    <a href="#conteudo" class="sr-only focus:not-sr-only">Pular para o conteúdo</a>
+    <nav class="mb-[1000px]">
+        <button id="menuButton" class="bg-purple-300 px-4 py-2">Menu</button>
+        <ul id="menu" class="hidden">
+          <li>Produtos</li>
+          <li>Sobre</li>
+          <li>Contato</li>
+        </ul>
+      </nav>
+      <h1 class="text-2xl" id="conteudo">Meu conteúdo</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat corporis officiis modi. Eaque modi possimus aspernatur illo iure totam dolores illum dolorum doloremque, amet, iusto necessitatibus, dicta natus! Odit, ipsam.</p>
+      <script>
+        menuButton?.addEventListener('click', () => {
+          menu?.classList.toggle('hidden');
+        });
+      </script>
+</body>
+
+</html>
