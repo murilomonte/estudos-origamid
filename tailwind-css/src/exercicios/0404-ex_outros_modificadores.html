@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="p-10">
+    <h1 class="uppercase font-bold tracking-wider">
+        Escolha a sua
+    </h1>
+
+    <form action="" class="*:mt-4">
+        <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3">
+            <input type="radio" name="bicicleta" id="istark" value="stark" class="peer col-start-1">
+            <label for="istark"
+                class="flex justify-between max-w-[400px] col-start-2 bg-slate-200 py-2 px-4 rounded-lg peer-checked:bg-slate-400 hover:bg-slate-300 cursor-pointer">
+                <span>Nimbus Stark</span>
+                <span>R$4.999</span>
+            </label>
+            <ul class="hidden peer-checked:block col-start-2 bg-slate-200 py-2 px-4 rounded-lg max-w-[500px]">
+                <li>Motor Elétrico</li>
+                <li>Fibra de Carbono</li>
+                <li>50 km/h</li>
+                <li>Rastreador</li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3">
+            <input type="radio" name="bicicleta" id="imagic" value="magic" class="peer col-start-1">
+            <label for="imagic"
+                class="flex justify-between max-w-[400px] col-start-2 bg-slate-200 py-2 px-4 rounded-lg peer-checked:bg-slate-400 hover:bg-slate-300 cursor-pointer">
+                <span>Magic Might</span>
+                <span>R$2.499</span>
+            </label>
+            <ul class="hidden peer-checked:block col-start-2 bg-slate-200 py-2 px-4 rounded-lg max-w-[500px]">
+                <li>Motor Elétrico</li>
+                <li>Fibra de Carbono</li>
+                <li>45 km/h</li>
+                <li>Rastreador</li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3">
+            <input type="radio" name="bicicleta" id="icosmic" value="cosmic" class="peer col-start-1">
+            <label for="icosmic"
+                class="flex justify-between max-w-[400px] col-start-2 bg-slate-200 py-2 px-4 rounded-lg peer-checked:bg-slate-400 hover:bg-slate-300 cursor-pointer">
+                <span>Nebula Cosmic</span>
+                <span>R$3.999</span>
+            </label>
+            <ul class="hidden peer-checked:block col-start-2 bg-slate-200 py-2 px-4 rounded-lg max-w-[500px]">
+                <li>Motor Elétrico</li>
+                <li>Fibra de Carbono</li>
+                <li>45 km/h</li>
+                <li>Rastreador</li>
+            </ul>
+        </div>
+    </form>
+
+</body>
+
+</html>
