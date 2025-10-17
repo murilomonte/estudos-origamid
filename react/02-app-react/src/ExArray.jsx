@@ -25,44 +25,39 @@ const produtos = [
 
 const ExArray = () => {
   const dadosFiltrados = produtos.filter(
-    ({ preco }) => Number(preco.replace("R$ ", "")) >= 1500,
+    ({ preco }) => Number(preco.replace("R$ ", "")) > 1500,
   );
   return (
-    <>
-      <section>
-        {dadosFiltrados.map((produto) => {
-          return (
-            <div key={produto.id}>
-              <h1>Nome: {produto.nome}</h1>
-              <p>Preco: {produto.preco}</p>
-              <div>
-                {produto.cores.map((cor) => {
-                  return (
-                    <p key={cor} style={{ background: cor, color: "white" }}>
-                      {cor}
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </section>
-    </>
+    <section>
+      {dadosFiltrados.map((produto) => {
+        return (
+          <Section
+            key={produto.id}
+            nome={produto.nome}
+            preco={produto.preco}
+            cores={produto.cores}
+          />
+        );
+      })}
+    </section>
   );
 };
 
-const Section = (id, nome, preco, cores) => {
+const Section = ({ nome, preco, cores }) => {
   return (
-    <section key={id}>
+    <div>
       <h1>Nome: {nome}</h1>
       <p>Preco: {preco}</p>
       <div>
         {cores.map((cor) => {
-          <p style={{ color: cor }}>{cor}</p>;
+          return (
+            <p key={cor} style={{ background: cor, color: "white" }}>
+              {cor}
+            </p>
+          );
         })}
       </div>
-    </section>
+    </div>
   );
 };
 
