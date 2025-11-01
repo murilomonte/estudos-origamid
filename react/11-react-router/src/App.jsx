@@ -15,7 +15,15 @@ const App = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="sobre" element={<Sobre />}></Route>
         <Route path="login" element={<Login />}></Route>
-        <Route path="produto/:id" element={<Produto />}></Route>
+        <Route path="produto/:id/*" element={<Produto />}></Route>
+
+        {/* 
+        Tambem e possivel criar as rotas diretamente
+        <Route path="produto/:id/*" element={<Produto />}>
+          <Route path="/" element={<ProdutoDescricao />} />
+          <Route path="avaliacao" element={<ProdutoAvaliacao />} />
+          <Route path="customizado" element={<ProdutoCustomizado />} />
+        </Route> */}
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
