@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  /* flex: 1 1 250px; */
+  max-width: 250px;
+}
+
+.produto > .imgContainer > img {
+  border-radius: 10px;
+  width: 100%;
+}
