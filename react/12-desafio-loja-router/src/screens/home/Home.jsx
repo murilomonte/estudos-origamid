@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "../../Head";
 import useFetch from "../../hooks/useFetch";
-import styles from './Home.module.css';
+import styles from "./Home.module.css";
+import Footer from "../_partials/Footer";
 
 // Utilize a API abaixo para puxar a lista de produto
 // https://ranekapi.origamid.dev/json/api/produto
@@ -16,29 +17,32 @@ const Home = () => {
   }, [request]);
 
   return (
-    <main className={styles.main}>
+    <>
       <Head
         title="Produtos"
         description="Onde você encontra os melhores produtos."
       />
-      {error ? <p>Error</p> : null}
-      {isLoading ? <p>Carregando...</p> : null}
-      {data
-        ? data.map((produto) => {
-            return (
-              <section key={produto.id} className={styles.produto}>
-                <div className={styles.imgContainer} >
-                  <img
-                    src={produto.fotos[0].src}
-                    alt={produto.fotos[0].titulo}
-                  />
-                </div>
-                <h2>{produto.nome}</h2>
-              </section>
-            );
-          })
-        : null}
-    </main>
+      <main className={styles.main}>
+        {error ? <p>Error</p> : null}
+        {isLoading ? <p>Carregando...</p> : null}
+        {data
+          ? data.map((produto) => {
+              return (
+                <section key={produto.id} className={styles.produto}>
+                  <div className={styles.imgContainer}>
+                    <img
+                      src={produto.fotos[0].src}
+                      alt={produto.fotos[0].titulo}
+                    />
+                  </div>
+                  <h2>{produto.nome}</h2>
+                </section>
+              );
+            })
+          : null}
+      </main>
+      <Footer />
+    </>
   );
 };
 
