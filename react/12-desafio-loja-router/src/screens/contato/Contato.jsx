@@ -6,7 +6,7 @@ const Contato = () => {
   return (
     <>
       <Head
-        title="Produtos"
+        title="Contato"
         description="Onde você encontra os melhores produtos."
       />
       <section className={styles.contato}>

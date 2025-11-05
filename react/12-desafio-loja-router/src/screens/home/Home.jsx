@@ -3,6 +3,7 @@ import Head from "../../Head";
 import useFetch from "../../hooks/useFetch";
 import styles from "./Home.module.css";
 import Footer from "../_partials/Footer";
+import { NavLink } from "react-router";
 
 // Utilize a API abaixo para puxar a lista de produto
 // https://ranekapi.origamid.dev/json/api/produto
@@ -28,15 +29,17 @@ const Home = () => {
         {data
           ? data.map((produto) => {
               return (
-                <section key={produto.id} className={styles.produto}>
-                  <div className={styles.imgContainer}>
-                    <img
-                      src={produto.fotos[0].src}
-                      alt={produto.fotos[0].titulo}
-                    />
-                  </div>
-                  <h2>{produto.nome}</h2>
-                </section>
+                <NavLink key={produto.id} to={`produto/${produto.id}`}>
+                  <section  className={styles.produto}>
+                    <div className={styles.imgContainer}>
+                      <img
+                        src={produto.fotos[0].src}
+                        alt={produto.fotos[0].titulo}
+                      />
+                    </div>
+                    <h2>{produto.nome}</h2>
+                  </section>
+                </NavLink>
               );
             })
           : null}

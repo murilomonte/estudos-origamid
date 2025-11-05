@@ -1,0 +1,34 @@
+.produto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation: animLeft .3s forwards;
+}
+
+.produto img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.produto .content {
+    padding: 50px;
+}
+
+.produto .price {
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #86FA54;
+    color: #067700;
+}
+
+@keyframes animLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

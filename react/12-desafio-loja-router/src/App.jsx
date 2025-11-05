@@ -5,6 +5,7 @@ import Header from "./screens/_partials/Header";
 import Contato from "./screens/contato/Contato";
 import NotFound from "./screens/errors/NotFound";
 import './global.css'
+import Produto from "./screens/home/produto/Produto";
 
 const App = () => {
   return (
@@ -13,8 +14,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="contato" element={<Contato />} />
-          <Route path="produto/:id" element={<Contato />} />
+          <Route path="contato" element={<Contato/>} />
+          <Route path="produto/:id" element={<Produto/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
