@@ -20,7 +20,7 @@ const Produto = () => {
         description="Onde você encontra os melhores produtos."
       />
       {error ? <p>Error</p> : null}
-      {isLoading ? <img src="src/img/loading.gif"/> : null}
+      {isLoading ? <div className='loading'></div> : null}
       {data ? (
         <section className={styles.produto} key={data.id}>
           <div >

@@ -1,17 +1,20 @@
 .contato {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
   animation: animLeft 0.3s forwards;
-}
-
-.contato img {
-  width: 500px;
-  border-radius: 20px;
 }
 
 .contato div {
   padding: 50px;
+}
+
+.contato li::before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 20px;
+  background-color: #ddd;
+  margin-right: 10px;
 }
 
 @keyframes animLeft {
